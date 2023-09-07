@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+    <div class="container col-md-6 offset-md-3">
+        <div class="mbr-section-head">
+            <h4 class="mbr-section-title mbr-fonts-style align-center mt-4 mb-0 display-2">
+                <strong>{{ servico.nome }}</strong></h4>
+
+        </div>
+        <div class="row mt-4">
+            <div class="item features-image сol-12">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <img src="{{ servico.imagem.thumb.url }}">
+                    </div>
+                    <div class="item-content">
+                        <p class="mbr-text mbr-fonts-style mt-3 display-7">{{ servico.descricao }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% load static %}
+<section class="team1 cid-sunxGubk5K" id="team1-p">
+
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2">
+                    <strong>Nossa Equipe</strong></h3>
+
+            </div>
+            {% for f in funcionarios %}
+                <div class="col-sm-6 col-lg-4">
+                <div class="card-wrap">
+                    <div class="image-wrap">
+                        <img src="{{ f.foto.thumb.url }}">
+                    </div>
+                    <div class="content-wrap">
+                        <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">
+                            <strong>{{ f.nome }}</strong>
+                        </h5>
+                        <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
+                            <strong>{{ f.cargo }}</strong>
+                        </h6>
+                        <p class="card-text mbr-fonts-style align-center display-7">
+                            {{ f.biografia }}
+                        </p>
+                        <div class="social-row display-7">
+                            <div class="soc-item">
+                                <a href="{{ f.facebook }}" target="_blank">
+                                    <span class="mbr-iconfont socicon socicon-facebook"></span>
+                                </a>
+                            </div>
+                            <div class="soc-item">
+                                <a href="{{ f.twitter }}" target="_blank">
+                                    <span class="mbr-iconfont socicon socicon-twitter"></span>
+                                </a>
+                            </div>
+                            <div class="soc-item">
+                                <a href="{{ f.instagram }}" target="_blank">
+                                    <span class="mbr-iconfont socicon socicon-instagram"></span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
